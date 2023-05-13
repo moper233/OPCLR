@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>H:\Net\OPCLR\x64\Debug\OPCLR.runtimeconfig.json</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>H:\Net\OPCLR\x64\Debug\OPCLR.dll</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

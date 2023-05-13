@@ -1,0 +1,12 @@
+H:\AliyunCode\OPCLR\x64\Debug\OPCLR.vcxproj.AssemblyReference.cache
+H:\AliyunCode\OPCLR\x64\Debug\Ijwhost.dll
+H:\AliyunCode\OPCLR\x64\Debug\OPCLR.dll
+H:\AliyunCode\OPCLR\x64\Debug\OPCLR.deps.json
+H:\AliyunCode\OPCLR\x64\Debug\OPCLR.genruntimeconfig.cache
+H:\AliyunCode\OPCLR\x64\Debug\OPCLR.runtimeconfig.json
+H:\Net\OPCLR\x64\Debug\OPCLR.vcxproj.AssemblyReference.cache
+H:\Net\OPCLR\x64\Debug\Ijwhost.dll
+H:\Net\OPCLR\x64\Debug\OPCLR.dll
+H:\Net\OPCLR\x64\Debug\OPCLR.deps.json
+H:\Net\OPCLR\x64\Debug\OPCLR.genruntimeconfig.cache
+H:\Net\OPCLR\x64\Debug\OPCLR.runtimeconfig.json

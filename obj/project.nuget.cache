@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zuv5CIszcZeExLzFL/sdfuXbI9o98zoDAXiRPQvZyVIy1cdg3jcz/NZoMSnqSMw8nmVeIPay5DiAK7WWmSbnfg==",
+  "success": true,
+  "projectFilePath": "H:\\Net\\OPCLR\\OPCLR.vcxproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22000.28\\microsoft.windows.sdk.net.ref.10.0.22000.28.nupkg.sha512"
+  ],
+  "logs": []
+}
