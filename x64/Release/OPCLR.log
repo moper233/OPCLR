@@ -1,0 +1,43 @@
+﻿  pch.cpp
+  AssemblyInfo.cpp
+  OPCLR.cpp
+H:\Net\OPCLR\libop.h(54,15): warning C4251: “libop::_curr_path”: class“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>”需要有 dll 接口由 class“libop”的客户端使用
+H:\Develop\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.35.32215\include\xstring(5301,29): message : 参见“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>”的声明
+H:\Net\OPCLR\libop.h(56,31): warning C4251: “libop::_vkmap”: class“std::map<std::wstring,long,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>”需要有 dll 接口由 class“libop”的客户端使用
+          with
+          [
+              _Kty=std::wstring,
+              _Ty=long
+          ]
+H:\Net\OPCLR\libop.h(56,7): message : 参见“std::map<std::wstring,long,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>”的声明
+          with
+          [
+              _Kty=std::wstring,
+              _Ty=long
+          ]
+H:\Net\OPCLR\libop.h(57,12): warning C4251: “libop::_screenData”: class“std::vector<unsigned char,std::allocator<_Ty>>”需要有 dll 接口由 class“libop”的客户端使用
+          with
+          [
+              _Ty=unsigned char
+          ]
+H:\Net\OPCLR\libop.h(15,24): message : 参见“std::vector<unsigned char,std::allocator<_Ty>>”的声明
+          with
+          [
+              _Ty=unsigned char
+          ]
+H:\Net\OPCLR\libop.h(58,12): warning C4251: “libop::_screenDataBmp”: class“std::vector<unsigned char,std::allocator<_Ty>>”需要有 dll 接口由 class“libop”的客户端使用
+          with
+          [
+              _Ty=unsigned char
+          ]
+H:\Net\OPCLR\libop.h(15,24): message : 参见“std::vector<unsigned char,std::allocator<_Ty>>”的声明
+          with
+          [
+              _Ty=unsigned char
+          ]
+H:\Net\OPCLR\libop.h(59,15): warning C4251: “libop::m_opPath”: class“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>”需要有 dll 接口由 class“libop”的客户端使用
+H:\Develop\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.35.32215\include\xstring(5301,29): message : 参见“std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>”的声明
+  正在生成代码...
+  .NETCoreApp,Version=v7.0.AssemblyAttributes.cpp
+  AssemblyInfo.obj : 遇到了 MSIL 模块；对 MSIL 禁用了增量链接；正在执行完全链接
+  OPCLR.vcxproj -> H:\Net\OPCLR\x64\Release\OPCLR.dll

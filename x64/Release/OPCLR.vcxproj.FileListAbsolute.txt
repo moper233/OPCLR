@@ -1,0 +1,6 @@
+H:\Net\OPCLR\x64\Release\OPCLR.vcxproj.AssemblyReference.cache
+H:\Net\OPCLR\x64\Release\Ijwhost.dll
+H:\Net\OPCLR\x64\Release\OPCLR.dll
+H:\Net\OPCLR\x64\Release\OPCLR.deps.json
+H:\Net\OPCLR\x64\Release\OPCLR.genruntimeconfig.cache
+H:\Net\OPCLR\x64\Release\OPCLR.runtimeconfig.json
