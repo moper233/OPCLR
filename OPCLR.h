@@ -15,6 +15,7 @@ using namespace msclr::interop;
 using namespace System::Runtime::InteropServices;
 
 namespace OPCLR {
+
 	public ref class OPSoft
 	{
 		// TODO: 在此处为此类添加方法。
@@ -55,7 +56,7 @@ namespace OPCLR {
 		//根据指定进程名,枚举系统中符合条件的进程PID
 		String^ EnumProcess(String^ name);
 		//把窗口坐标转换为屏幕坐标
-		int ClientToScreen(long ClientToScreen, long* x, long* y, long* bret);
+		System::Tuple<long, long, int>^ ClientToScreen(long ClientToScreen);
 		//查找符合类名或者标题名的顶层可见窗口
 		int FindWindow(String^ class_name, String^ title);
 		//根据指定的进程名字，来查找可见窗口
@@ -65,9 +66,9 @@ namespace OPCLR {
 		//查找符合类名或者标题名的顶层可见窗口,如果指定了parent,则在parent的第一层子窗口中查找
 		int FindWindowEx(long parent, String^ class_name, String^ title);
 		//获取窗口客户区域在屏幕上的位置
-		int GetClientRect(long hwnd, long* x1, long* y1, long* x2, long* y2);
+		System::Tuple<long, long, long, long, int>^ GetClientRect(long hwnd);
 		//获取窗口客户区域的宽度和高度
-		int GetClientSize(long hwnd, long* width, long* height);
+		System::Tuple<long, long, int>^ GetClientSize(long hwnd);
 		//获取顶层活动窗口中具有输入焦点的窗口句柄
 		int GetForegroundFocus();
 		//获取顶层活动窗口,可以获取到按键自带插件无法获取到的句柄
@@ -89,7 +90,7 @@ namespace OPCLR {
 		//获取指定窗口所在的进程的exe文件全路径
 		String^ GetWindowProcessPath(long hwnd);
 		//获取窗口在屏幕上的位置
-		int GetWindowRect(long hwnd, long* x1, long* y1, long* x2, long* y2);
+		System::Tuple<long, long, long, long, int>^ GetWindowRect(long hwnd);
 		//获取指定窗口的一些属性
 		int GetWindowState(long hwnd, long flag);
 		//获取窗口的标题
@@ -97,7 +98,7 @@ namespace OPCLR {
 		//移动指定窗口到指定位置
 		int MoveWindow(long hwnd, long x, long y);
 		//把屏幕坐标转换为窗口坐标
-		int ScreenToClient(long hwnd, long* x, long* y);
+		System::Tuple<long, long, int>^ ScreenToClient(long hwnd);
 		//向指定窗口发送粘贴命令
 		int SendPaste(long hwnd);
 		//设置窗口客户区域的宽度和高度
@@ -184,22 +185,22 @@ namespace OPCLR {
 		//比较指定坐标点(x,y)的颜色
 		int CmpColor(long x, long y, String^ color, double sim);
 		//查找指定区域内的颜色
-		int FindColor(long x1, long y1, long x2, long y2, String^ color, double sim, long dir, long* x, long* y);
+		Tuple<long, long, int>^ FindColor(long x1, long y1, long x2, long y2, String^ color, double sim, long dir);
 		//查找指定区域内的所有颜色
 		String^ FindColorEx(long x1, long y1, long x2, long y2, String^ color, double sim, long dir);
 		//根据指定的多点查找颜色坐标
-		int FindMultiColor(long x1, long y1, long x2, long y2, String^ first_color, String^ offset_color, double sim, long dir, long* x, long* y);
+		Tuple<long, long, int>^ FindMultiColor(long x1, long y1, long x2, long y2, String^ first_color, String^ offset_color, double sim, long dir);
 		//根据指定的多点查找所有颜色坐标
 		String^ FindMultiColorEx(long x1, long y1, long x2, long y2, String^ first_color, String^ offset_color, double sim, long dir);
 		//查找指定区域内的图片
-		int FindPic(long x1, long y1, long x2, long y2, String^ files, String^ delta_color, double sim, long dir, long* x, long* y);
+		Tuple<long, long, int>^ FindPic(long x1, long y1, long x2, long y2, String^ files, String^ delta_color, double sim, long dir);
 		//查找多个图片
 		String^ FindPicEx(long x1, long y1, long x2, long y2, String^ files, String^ delta_color, double sim, long dir);
 		//
 		//这个函数可以查找多个图片, 并且返回所有找到的图像的坐标.此函数同FindPicEx.只是返回值不同.(file1,x,y|file2,x,y|...)
 		String^ FindPicExS(long x1, long y1, long x2, long y2, String^ files, String^ delta_color, double sim, long dir);
 		//查找指定区域内的颜色块,颜色格式"RRGGBB-DRDGDB",注意,和按键的颜色格式相反
-		int FindColorBlock(long x1, long y1, long x2, long y2, String^ color, double sim, long count, long height, long width, long* x, long* y);
+		Tuple<long, long, int>^ FindColorBlock(long x1, long y1, long x2, long y2, String^ color, double sim, long count, long height, long width);
 		//查找指定区域内的所有颜色块, 颜色格式"RRGGBB-DRDGDB", 注意, 和按键的颜色格式相反
 		String^ FindColorBlockEx(long x1, long y1, long x2, long y2, String^ color, double sim, long count, long height, long width);
 		//获取(x,y)的颜色
@@ -218,7 +219,7 @@ namespace OPCLR {
 		//
 		int GetScreenDataBmp(long x1, long y1, long x2, long y2, size_t* data, long* size);
 		//
-		void GetScreenFrameInfo(long* frame_id, long* time);
+		Tuple<long, long>^ GetScreenFrameInfo();
 		//
 		String^ MatchPicName(String^ pic_name);
 		//----------------------ocr-------------------------
@@ -233,7 +234,7 @@ namespace OPCLR {
 		//回识别到的字符串，以及每个字符的坐标.
 		String^ OcrEx(long x1, long y1, long x2, long y2, String^ color, double sim);
 		//在屏幕范围(x1,y1,x2,y2)内,查找string(可以是任意个字符串的组合),并返回符合color_format的坐标位置
-		int FindStr(long x1, long y1, long x2, long y2, String^ strs, String^ color, double simxy);
+		Tuple<long, long, int>^ FindStr(long x1, long y1, long x2, long y2, String^ strs, String^ color, double simxy);
 		//返回符合color_format的所有坐标位置
 		String^ FindStrEx(long x1, long y1, long x2, long y2, String^ strs, String^ color, double sim);
 		//识别屏幕范围(x1,y1,x2,y2)内的字符串,自动二值化，而无需指定颜色
