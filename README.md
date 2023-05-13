@@ -5,3 +5,6 @@ OP插件的.Net中间件，免注册不使用COM
 
 使用方式：
 .NetCore程序直接引用OPCLR.DLL即可，运行目录放置OPCLR.dll、Ijwhost.dll、OPCLR.dll
+
+宿主项目 https://github.com/WallBreaker2/op
+宿主QQGroup：743710486
