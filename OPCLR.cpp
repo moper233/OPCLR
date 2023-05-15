@@ -796,12 +796,12 @@ namespace OPCLR {
 
 	}
 
-	
+
 
 	int KMSoft::Open()
 	{
 		if (km_handle != NULL)return 1;
-		
+
 		km_handle = M_Open(1);
 		return km_handle == NULL ? 0 : 1;
 	}
@@ -815,16 +815,16 @@ namespace OPCLR {
 
 	int KMSoft::Close()
 	{
-		try 
+		try
 		{
-			//未知错误开摆
-			
-	/*		 M_Close(km_handle);
-			 km_handle = NULL;*/
+			//未知错误开摆 估计是MT/MTD编译的臭嗨插件 CLR支持有点问题
+
+	/*		M_Close(km_handle);
+			km_handle = NULL;*/
 		}
 		catch (...)
 		{
-			
+
 		}
 
 		return 1;
