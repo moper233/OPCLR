@@ -27,6 +27,9 @@
     <ClInclude Include="libop.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="msdk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OPCLR.cpp">

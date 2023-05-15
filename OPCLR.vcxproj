@@ -124,12 +124,13 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>op_x64.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>I:\tools\op\build\libop\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>op_x64.lib;msdk.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>I:\tools\afeiyilai\x64;I:\tools\op\build\libop\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="libop.h" />
+    <ClInclude Include="msdk.h" />
     <ClInclude Include="OPCLR.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />

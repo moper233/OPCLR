@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "OPCLR.h"
 
+
 namespace OPCLR {
 
 	static libop op;
@@ -788,6 +789,63 @@ namespace OPCLR {
 		wstring ret;
 		op.ReadData(hwnd, StringToWchar(address), size, ret);
 		return WStringToString(ret);
+	}
+
+	OPSoft::~OPSoft()
+	{
+
+	}
+
+	
+
+	int KMSoft::Open()
+	{
+		if (km_handle != NULL)return 1;
+		
+		km_handle = M_Open(1);
+		return km_handle == NULL ? 0 : 1;
+	}
+
+	int KMSoft::Open_VidPid(int Vid, int Pid)
+	{
+		if (km_handle != NULL)return 1;
+		auto handle = M_Open_VidPid(Vid, Pid);
+		return km_handle == NULL ? 0 : 1;
+	}
+
+	int KMSoft::Close()
+	{
+		try 
+		{
+			//Î´Öª´íÎó¿ª°Ú
+			
+	/*		 M_Close(km_handle);
+			 km_handle = NULL;*/
+		}
+		catch (...)
+		{
+			
+		}
+
+		return 1;
+	}
+
+	int KMSoft::MoveR(int x, int y)
+	{
+		if (km_handle == NULL)return 0;
+		return M_MoveR(km_handle, x, y);
+
+	}
+
+	int KMSoft::MoveTo(int x, int y)
+	{
+		if (km_handle == NULL)return 0;
+		return M_MoveTo(km_handle, x, y);
+	}
+
+	KMSoft::~KMSoft()
+	{
+		if (km_handle != NULL)km_handle = NULL;
 	}
 
 }

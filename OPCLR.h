@@ -3,6 +3,8 @@
 #include <string>
 #include<vector>
 #include "libop.h"
+#include "msdk.h"
+
 #include <msclr\marshal.h>
 #include <msclr\marshal_cppstd.h>
 
@@ -16,9 +18,23 @@ using namespace System::Runtime::InteropServices;
 
 namespace OPCLR {
 
+	public ref class KMSoft
+	{
+
+	private:
+		HANDLE km_handle;
+
+	public:
+		int Open();
+		int Open_VidPid(int vid, int pid);
+		int Close();
+		int MoveR(int x, int y);
+		int MoveTo(int x,int y);
+		~KMSoft();
+	};
+
 	public ref class OPSoft
 	{
-		// TODO: 在此处为此类添加方法。
 
 	public:
 		String^ Ver();
@@ -250,5 +266,7 @@ namespace OPCLR {
 		int WriteData(long hwnd, String^ address, String^ data, long size);
 		//读取数据
 		String^ ReadData(long hwnd, String^ address, long size);
+		
+		~OPSoft();
 	};
 }
