@@ -1,4 +1,5 @@
-﻿  AssemblyInfo.obj : 遇到了 MSIL 模块；对 MSIL 禁用了增量链接；正在执行完全链接
+﻿  AssemblyInfo.cpp
+  AssemblyInfo.obj : 遇到了 MSIL 模块；对 MSIL 禁用了增量链接；正在执行完全链接
   BlackBone.lib(SymbolLoader.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
     正在创建库 H:\Net\OPCLR\x64\Release\OPCLR.lib 和对象 H:\Net\OPCLR\x64\Release\OPCLR.exp
   正在生成代码
